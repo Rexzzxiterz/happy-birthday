@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Nadiva</title>
+
+  <!-- Font kaligrafi -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- Particles.js untuk efek salju -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Great Vibes', cursive;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-top: 50px;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+    }
+
+    .romantic-text {
+      font-size: 26px;
+      margin: 20px auto;
+      max-width: 600px;
+      text-shadow: 0 0 10px rgba(255, 192, 203, 0.6);
+    }
+
+    .photo-container {
+      margin-top: 30px;
+    }
+
+    .photo-container img {
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 80px;
+      height: 100px;
+      background-color: #ff4d6d;
+      border-radius: 50%;
+      animation: float 10s infinite ease-in;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-100vh) rotate(360deg); }
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <h1>Selamat Ulang Tahun, Nadiva</h1>
+
+  <div class="romantic-text">
+    Semoga hari-harimu selalu dipenuhi kebahagiaan, senyum manis, dan cinta yang tak terbatas.<br/>
+    Aku bersyukur bisa bersamamu dalam momen spesial ini.
+  </div>
+
+  <div class="photo-container">
+    <img src="foto-berdua.jpg" alt="Foto berdua" />
+  </div>
+
+  <!-- Balon-balon terbang -->
+  <div class="balloon" style="left: 20%; animation-delay: 0s;"></div>
+  <div class="balloon" style="left: 40%; animation-delay: 2s;"></div>
+  <div class="balloon" style="left: 60%; animation-delay: 4s;"></div>
+  <div class="balloon" style="left: 80%; animation-delay: 6s;"></div>
+
+  <!-- Musik -->
+  <audio autoplay loop>
+    <source src="monokrom.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung elemen audio.
+  </audio>
+
+  <!-- Konfigurasi salju -->
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 100 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.8 },
+        size: { value: 4, random: true },
+        move: {
+          direction: "bottom",
+          speed: 1,
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: false },
+          onclick: { enable: false }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>
